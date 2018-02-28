@@ -1,0 +1,23 @@
+server:
+  port: 8889
+spring:
+  application:
+    name: service-consume
+  cloud:
+    config:
+      label: master
+      profile: dev
+      discovery:
+        enabled: true
+        service-id: cfg-server
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    #服务注册中心地址
+    service-url:
+      defaultZone: http://localhost:8881/eureka/
+#开启断路由(删除了就没有断路由了)
+feign:
+  hystrix:
+    enabled: true
