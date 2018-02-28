@@ -1,0 +1,22 @@
+server:
+  port: 8885
+spring:
+  application:
+    name: service-a
+  cloud:
+    #从配置服务器获取文件,自身的配置文件,比如数据库信息
+    config:
+      profile: dev
+      label: master
+      discovery:
+        enabled: true
+        service-id: cfg-server
+eureka:
+  client:
+    #发现服务
+    fetch-registry: true
+    #注册服务
+    register-with-eureka: true
+    #服务注册中心地址
+    service-url:
+      defaultZone: http://localhost:8881/eureka/

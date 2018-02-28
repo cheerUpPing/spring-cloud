@@ -1,0 +1,28 @@
+server:
+  port: 8891
+spring:
+  application:
+    name: zuul-gate
+  cloud:
+    config:
+      label: master
+      profile: dev
+      #向服务注册中心发现配置服务器
+      discovery:
+        enabled: true
+        service-id: cfg-server
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8881/eureka/
+zuul:
+  #routes下面的路由数据都是成对出现的
+  routes:
+    baidu:
+      path: /it/**
+      url: http://www.baidu.com
+    service-consume:
+      path: /consume/**
+      url: http://localhost:8889/

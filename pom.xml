@@ -1,0 +1,37 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>elon</groupId>
+    <artifactId>chagen_job</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>SvcReg</module>
+        <module>cfgserver</module>
+        <module>service-a-provice</module>
+        <module>service-b-provice</module>
+        <module>service-consume</module>
+        <module>entity</module>
+        <module>zuul-gate</module>
+    </modules>
+    <packaging>pom</packaging>
+    <description>换工作练习的项目</description>
+
+    <name>chagen_job</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.7.RELEASE</version>
+    </parent>
+
+    <dependencies>
+
+
+    </dependencies>
+</project>
